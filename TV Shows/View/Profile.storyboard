@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="YOY-Hc-o5q">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="Xsl-HW-4Cc" customClass="ProfileViewController" customModule="TV_Shows" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="42I-pl-IUO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dV-My-7bh">
+                                <rect key="frame" x="20.000000000000004" y="84" width="43.333333333333343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jOL-bu-7nY">
+                                <rect key="frame" x="20" y="129" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Qw5-Qg-4RS"/>
+                                    <constraint firstAttribute="width" constant="100" id="XFg-fL-1c4"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdK-TL-51b">
+                                <rect key="frame" x="140" y="157" width="184" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="D7P-q2-38h"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change profile photo">
+                                    <color key="baseForegroundColor" red="0.32156862749999998" green="0.21176470589999999" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="changeProfilePhotoHandler" destination="Xsl-HW-4Cc" eventType="touchUpInside" id="hBx-LG-Apy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcM-qL-tAa">
+                                <rect key="frame" x="20" y="273" width="353" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="GOk-zd-NOn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Logout" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.32156862749999998" green="0.21176470589999999" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logoutHandler" destination="Xsl-HW-4Cc" eventType="touchUpInside" id="QL4-zM-Fae"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tCQ-2Y-mqv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UcM-qL-tAa" firstAttribute="centerX" secondItem="42I-pl-IUO" secondAttribute="centerX" id="Jl0-ze-MZE"/>
+                            <constraint firstItem="jOL-bu-7nY" firstAttribute="leading" secondItem="tCQ-2Y-mqv" secondAttribute="leading" constant="20" id="VTP-ch-hP6"/>
+                            <constraint firstItem="jOL-bu-7nY" firstAttribute="top" secondItem="tCQ-2Y-mqv" secondAttribute="top" constant="70" id="aoL-YZ-CMh"/>
+                            <constraint firstItem="4dV-My-7bh" firstAttribute="top" secondItem="tCQ-2Y-mqv" secondAttribute="top" constant="25" id="c2Z-G6-DGG"/>
+                            <constraint firstItem="UcM-qL-tAa" firstAttribute="leading" secondItem="tCQ-2Y-mqv" secondAttribute="leading" constant="20" id="cM1-A2-BAD"/>
+                            <constraint firstItem="4dV-My-7bh" firstAttribute="leading" secondItem="tCQ-2Y-mqv" secondAttribute="leading" constant="20" id="eeI-AZ-mr0"/>
+                            <constraint firstItem="tdK-TL-51b" firstAttribute="top" secondItem="tCQ-2Y-mqv" secondAttribute="top" constant="98" id="mLO-wV-wjS"/>
+                            <constraint firstItem="UcM-qL-tAa" firstAttribute="top" secondItem="tCQ-2Y-mqv" secondAttribute="top" constant="214" id="v4i-sM-7tm"/>
+                            <constraint firstItem="tdK-TL-51b" firstAttribute="leading" secondItem="tCQ-2Y-mqv" secondAttribute="leading" constant="140" id="zpl-Fv-Qlt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="4dV-My-7bh" id="8ME-XZ-jgF"/>
+                        <outlet property="profileImage" destination="jOL-bu-7nY" id="nCk-ET-z9A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U6p-6c-6Zg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2530.5343511450383" y="663.38028169014092"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
